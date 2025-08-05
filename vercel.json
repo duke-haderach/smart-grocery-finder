@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "version": 2,
   "builds": [
@@ -23,4 +24,17 @@
       "dest": "/client/dist/$1"
     }
   ]
+=======
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "client/dist"
+      }
+    }
+  ]
+>>>>>>> 27a6e46be65e2a293d71e9ab297d344d28b61e3a
 } 

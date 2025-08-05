@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
@@ -9,4 +10,17 @@
     "healthcheckTimeout": 100,
     "restartPolicyType": "ON_FAILURE"
   }
+=======
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "startCommand": "npm start",
+    "healthcheckPath": "/",
+    "healthcheckTimeout": 100,
+    "restartPolicyType": "ON_FAILURE"
+  }
+>>>>>>> 27a6e46be65e2a293d71e9ab297d344d28b61e3a
 } 
