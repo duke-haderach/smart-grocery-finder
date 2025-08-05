@@ -41,17 +41,12 @@ app.use('*', (req, res) => {
         error: 'Route not found'
     });
 });
-// Start server
-function startServer() {
-    try {
-        app.listen(PORT, () => {
-            console.log(`🚀 Server running on port ${PORT}`);
-            console.log(`📍 Health check: http://localhost:${PORT}/api/health`);
-        });
-    }
-    catch (error) {
-        console.error('Failed to start server:', error);
-        process.exit(1);
-    }
+// For local development
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`🚀 Server running on port ${PORT}`);
+        console.log(`📍 Health check: http://localhost:${PORT}/api/health`);
+    });
 }
-startServer();
+// Export for Vercel serverless
+export default app;
